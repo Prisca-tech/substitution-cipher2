@@ -1,3 +1,8 @@
+jumps = 0
+choice = " "
+
+
+
 def getName():
     print("Hello, what is your name? ")
     name = str(input(" "))
@@ -17,8 +22,7 @@ def instantiate():
 
 
 def encrypt():
-    pass
-
+   pass
 def decrypt():
     pass
 
@@ -27,9 +31,6 @@ def reset():
 
 def history():
     pass
-
-jumps = 0
-choice = " "
 
 
 # to display a menu
@@ -55,3 +56,4 @@ while (choice.lower() !="exit"):
 
 
 
+   
