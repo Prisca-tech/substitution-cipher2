@@ -3,8 +3,6 @@ def getName():
     name = str(input(" "))
     print("Hello, name")
     return name
-    
-
 
 def getInput():
     x = str(input( ))
@@ -29,8 +27,6 @@ def reset():
 def history():
     pass
 
-  
-
 # to display a menu
  
 print('''
@@ -41,11 +37,5 @@ print('''
 5. History
 ''')
 
-print("Enter your the number that corresponds with the task you want to perform ")
+print("Enter the number that corresponds with the task you want to perform ")
 choice = int(input( ))
-
-task = [instantiate, encrypt, decrypt, reset, history]
-
-result = task [choice-1]()
-
-print(result)
