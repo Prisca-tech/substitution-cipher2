@@ -4,6 +4,7 @@ def getName():
     print("Hello, name")
     return name
 
+feature-instantiate
 def getInput():
     x = str(input( ))
     return x
@@ -28,6 +29,7 @@ def history():
     pass
 
 # to display a menu
+ main
  
 print('''
 1. Instantiate encryption parameters
