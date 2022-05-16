@@ -16,8 +16,9 @@ def getInput():
 
 def instantiate():
     print("What is your preferred number of character jumps? ")
-    jumps = int(input(" "))
+    jumps = int(input(' '))
     return jumps
+    # setup character jumps
 
 
 
