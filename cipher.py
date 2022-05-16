@@ -42,6 +42,7 @@ while (choice.lower() !="exit"):
     3. Decrypt text
     4. Reset encryption parameters
     5. History
+    6. Exit
     ''')
 
     print("Enter the number that corresponds with the task you want to perform ")
@@ -50,11 +51,13 @@ while (choice.lower() !="exit"):
     if choice == "1":
         jumps = instantiate()
         print(f'jumps instantiated to {jumps}')
+        print("press 'enter' to continue")
 
     elif choice == "2":
         encrypt()
 
-
+    else:
+        print("The feature has not been implemented yet, please check back for updates.")
 
 
    
