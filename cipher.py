@@ -4,17 +4,17 @@ def getName():
     print("Hello, name")
     return name
 
-feature-instantiate
 def getInput():
     x = str(input( ))
     return x
 
 
 def instantiate():
-    x = getInput()
     print("What is your preferred number of character jumps? ")
-    jumps = int(input( ))
+    jumps = int(input(" "))
     return jumps
+
+
 
 def encrypt():
     pass
@@ -28,16 +28,30 @@ def reset():
 def history():
     pass
 
-# to display a menu
- main
- 
-print('''
-1. Instantiate encryption parameters
-2. Encrypt
-3. Decrypt text
-4. Reset encryption parameters
-5. History
-''')
+jumps = 0
+choice = " "
 
-print("Enter the number that corresponds with the task you want to perform ")
-choice = int(input( ))
+
+# to display a menu
+while (choice.lower() !="exit"):
+    print('''
+    1. Instantiate encryption parameters
+    2. Encrypt text
+    3. Decrypt text
+    4. Reset encryption parameters
+    5. History
+    ''')
+
+    print("Enter the number that corresponds with the task you want to perform ")
+    choice = input( )
+
+    if choice == "1":
+        jumps = instantiate()
+        print(f'jumps instantiated to {jumps}')
+
+    elif choice == "2":
+        encrypt()
+
+
+
+
