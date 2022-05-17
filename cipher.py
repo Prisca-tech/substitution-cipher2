@@ -25,11 +25,11 @@ def encrypt():
     plainText = input('ENTER MESSAGE: ')
     # The key here means that the moving steps of the text so if the user enters letter A it will move to letter E
     key = jumps
-    ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     # this is where the message appears after it has been encrypted
     cypherText = ' '
 
-    plainText = plainText.upper()
+    plainText = plainText
 
     for letter in plainText:
         # we iterate throught the inputted values first
