@@ -55,7 +55,7 @@ def decrypt():
     key = jumps
     ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     # this is where the message appears after it has been encrypted
-    cypherText = " "
+    cypherText = ' '
 
     plainText = plainText.upper()
 
