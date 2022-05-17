@@ -26,6 +26,7 @@ def encrypt():
     # The key here means that the moving steps of the text so if the user enters letter A it will move to letter E
     key = jumps
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+    ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     # this is where the message appears after it has been encrypted
     cypherText = ' '
 
