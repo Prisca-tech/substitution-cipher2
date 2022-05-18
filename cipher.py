@@ -22,12 +22,10 @@ def instantiate():
 
 
 def encrypt():
-    raw_input = input
     plainText = input('ENTER MESSAGE: ')
     # The key here means that the moving steps of the text so if the user enters letter A it will move to letter E
     key = jumps
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
-    ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     # this is where the message appears after it has been encrypted
     cypherText = ' '
 
@@ -35,9 +33,9 @@ def encrypt():
 
     for letter in plainText:
         # we iterate throught the inputted values first
-        if letter in ALPHABET:
+        if letter.lower() in ALPHABET:
             # then we check if the letters are contained in the alphabets using the find function
-            num = ALPHABET.find(letter)
+            num = ALPHABET.find(letter.lower())
             # when if finds the letter it will add the key to it which are the steps so if it finds letter A  the next letter becomes E
             num = num + key
             if num >= len(ALPHABET):
@@ -45,7 +43,11 @@ def encrypt():
                 num = num - len(ALPHABET)
             elif num < 0:
                 num = num + len(ALPHABET)
-            cypherText = cypherText + ALPHABET[num]
+
+            if letter == letter.lower():
+                cypherText = cypherText + ALPHABET[num]
+            else:
+                cypherText = cypherText + ALPHABET[num].upper()
         else:
             cypherText = cypherText + letter
     print(cypherText)
