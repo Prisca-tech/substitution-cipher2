@@ -1,3 +1,6 @@
+from turtle import clear
+
+
 jumps = 0
 choice = " "
 
@@ -85,10 +88,6 @@ def decrypt():
     print(cypherText)
 
 
-def reset():
-    pass
-
-
 def history():
     pass
 
@@ -124,6 +123,12 @@ while (choice.lower() != "0"):
     elif choice == "0":
         print("Exit")
         exit()
+
+    elif choice == "4":
+        jumps = 0
+        print("Restarting...")
+        print("Enter new ecryption parameters")
+        input("Press Enter to continue...")
 
     else:
         print("The feature has not been implemented yet, please check back for updates.")
