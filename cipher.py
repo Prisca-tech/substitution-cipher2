@@ -16,8 +16,11 @@ def getInput():
 
 def instantiate():
     print("What is your preferred number of character jumps? ")
-    jumps = int(input(' '))
-    return jumps
+    try:
+        jumps = int(input(' '))
+        return jumps
+    except ValueError:
+        print("Error! please enter a number between 1-26")
     # setup character jumps
 
 
@@ -60,7 +63,7 @@ def decrypt():
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     # this is where the message appears after it has been encrypted
     cypherText = ' '
-
+    
     plainText = plainText
 
     for letter in plainText:
@@ -68,7 +71,7 @@ def decrypt():
         if letter.lower() in ALPHABET:
             # then we check if the letters are contained in the alphabets using the find function
             num = ALPHABET.find(letter.lower())
-            # when if finds the letter it will add the key to it which are the steps so if it finds letter A  the next letter becomes E
+            # when if finds the letter it will subtract the key to it which are the steps so if it finds letter A  the next letter becomes X
             num = num - key
             if num >= len(ALPHABET):
                 # meaning if the keys are moved become longer than the alphabet
@@ -83,10 +86,6 @@ def decrypt():
         else:
             cypherText = cypherText + letter
     print(cypherText)
-
-
-def reset():
-    pass
 
 
 def history():
@@ -124,6 +123,12 @@ while (choice.lower() != "0"):
     elif choice == "0":
         print("Exit")
         exit()
+
+    elif choice == "4":
+        jumps = 0
+        print("Restarting...")
+        print("Enter new ecryption parameters")
+        input("Press Enter to continue...")
 
     else:
         print("The feature has not been implemented yet, please check back for updates.")
