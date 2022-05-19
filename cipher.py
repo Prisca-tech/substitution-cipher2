@@ -1,6 +1,3 @@
-from turtle import clear
-
-
 jumps = 0
 choice = " "
 
