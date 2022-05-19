@@ -19,8 +19,11 @@ def getInput():
 
 def instantiate():
     print("What is your preferred number of character jumps? ")
-    jumps = int(input(' '))
-    return jumps
+    try:
+        jumps = int(input(' '))
+        return jumps
+    except ValueError:
+        print("Error! please enter a number between 1-26")
     # setup character jumps
 
 
