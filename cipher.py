@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 jumps = 0
 choice = " "
 logs = []
@@ -55,7 +58,9 @@ def encrypt():
         else:
             cypherText = cypherText + letter
     print(cypherText)
-    logs.append(cypherText)
+    logs.append(
+        f'encryption  -  {plainText}  -  {cypherText}  -  {datetime.now()}')
+
     # return cypherText
 
 
@@ -69,7 +74,7 @@ def decrypt():
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     # this is where the message appears after it has been encrypted
     cypherText = ' '
-    
+
     plainText = plainText
 
     for letter in plainText:
@@ -92,7 +97,9 @@ def decrypt():
         else:
             cypherText = cypherText + letter
     print(cypherText)
-    logs.append(cypherText)
+    logs.append(
+        f'decryption  -  {plainText}  -  {cypherText}  -  {datetime.now()}')
+
     # return cypherText
     # logs.append(decrypt())
 
@@ -141,6 +148,6 @@ while (choice.lower() != "0"):
 
     elif choice == "5":
         history()
-      
+
     else:
         print("The feature has not been implemented yet, please check back for updates.")
