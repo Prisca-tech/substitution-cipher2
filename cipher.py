@@ -6,18 +6,6 @@ choice = " "
 logs = []
 
 
-def getName():
-    print("Hello, what is your name? ")
-    name = str(input(" "))
-    print("Hello, name")
-    return name
-
-
-def getInput():
-    x = str(input())
-    return x
-
-
 def instantiate():
     print("What is your preferred number of character jumps? ")
     try:
@@ -106,48 +94,3 @@ def decrypt():
 
 def history():
     print(logs)
-
-
-# to display a menu
-print("press '0' to exit")
-
-while (choice.lower() != "0"):
-    print('''
-    1. Instantiate encryption parameters
-    2. Encrypt text
-    3. Decrypt text
-    4. Reset encryption parameters
-    5. History
-    ''')
-
-    print("Enter the number that corresponds with the task you want to perform: ")
-    choice = input()
-
-    if choice == "1":
-        jumps = instantiate()
-        print(f'jumps instantiated to {jumps}')
-        input("Press Enter to continue...")
-
-    elif choice == "2":
-        encrypt()
-        input("Press Enter to continue...")
-
-    elif choice == "3":
-        decrypt()
-        input("Press Enter to continue...")
-
-    elif choice == "0":
-        print("Exit")
-        exit()
-
-    elif choice == "4":
-        jumps = 0
-        print("Restarting...")
-        print("Enter new ecryption parameters")
-        input("Press Enter to continue...")
-
-    elif choice == "5":
-        history()
-
-    else:
-        print("The feature has not been implemented yet, please check back for updates.")
