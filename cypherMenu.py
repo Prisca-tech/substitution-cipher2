@@ -1,9 +1,12 @@
+
 import cipher
+
+choice = " "
 
 # to display a menu
 print("press '0'to exit")
 
-while (cipher.choice.lower() != "0"):
+while (choice.lower() != "0"):
     print('''
     1. Instantiate encryption parameters
     2. Encrypt text
@@ -13,32 +16,32 @@ while (cipher.choice.lower() != "0"):
     ''')
 
     print("Enter the number that corresponds with the task you want to perform: ")
-    cipher.choice = input()
+    choice = input()
 
-    if cipher.choice == "1":
+    if choice == "1":
         cipher.jumps = cipher.instantiate()
         print(f'jumps instantiated to {cipher.jumps}')
         input("Press Enter to continue...")
 
-    elif cipher.choice == "2":
+    elif choice == "2":
         cipher.encrypt()
         input("Press Enter to continue...")
 
-    elif cipher.choice == "3":
+    elif choice == "3":
         cipher.decrypt()
         input("Press Enter to continue...")
 
-    elif cipher.choice == "0":
+    elif choice == "0":
         print("Exit")
         exit()
 
-    elif cipher.choice == "4":
+    elif choice == "4":
         cipher.jumps = 0
         print("Restarting...")
         print("Enter new ecryption parameters")
         input("Press Enter to continue...")
 
-    elif cipher.choice == "5":
+    elif choice == "5":
         cipher.history()
 
     else:

@@ -1,9 +1,7 @@
 from datetime import datetime
-
+import logger
 
 jumps = 0
-choice = " "
-logs = []
 
 
 def instantiate():
@@ -23,8 +21,6 @@ def encrypt():
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     # this is where the message appears after it has been encrypted
     cypherText = ' '
-
-    plainText = plainText
 
     for letter in plainText:
         # we iterate throught the inputted values first
@@ -46,13 +42,8 @@ def encrypt():
         else:
             cypherText = cypherText + letter
     print(cypherText)
-    logs.append(
-        f'encryption  -  {plainText}  -  {cypherText}  -  {datetime.now()}')
 
-    # return cypherText
-
-
-# logs.append(encrypt())
+    logger.addLog(f'encryption  -  {plainText}  -  {cypherText}')
 
 
 def decrypt():
@@ -62,8 +53,6 @@ def decrypt():
     ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
     # this is where the message appears after it has been encrypted
     cypherText = ' '
-
-    plainText = plainText
 
     for letter in plainText:
         # we iterate throught the inputted values first
@@ -85,12 +74,8 @@ def decrypt():
         else:
             cypherText = cypherText + letter
     print(cypherText)
-    logs.append(
-        f'decryption  -  {plainText}  -  {cypherText}  -  {datetime.now()}')
-
-    # return cypherText
-    # logs.append(decrypt())
+    logger.addLog(f'decryption  -  {plainText}  -  {cypherText}')
 
 
 def history():
-    print(logs)
+    print(logger.viewLog())
